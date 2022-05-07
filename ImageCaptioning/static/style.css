@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url("images/bgimg.png");
+    
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #014F86;
+}
+
+.logo{
+    width: 100px;
+    padding-left: 6%;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+.webpagename{
+    color: white;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0;
+}
+
+.col-1{
+    padding-left: 8%;
+    flex-basis: 40%;
+}
+
+.col-1 h1{
+    flex-basis: 40%;
+    font-size: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 2.2s steps(60, end);
+}
+
+.col-1 h4{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #545454;
+
+    overflow: hidden;
+    /* transition-delay: 5s; */
+    white-space: nowrap; 
+    margin: 0;
+
+    animation: 
+    typing 2.2s steps(40, end),
+    blink-caret .75s step-end infinite;
+
+    /* -webkit-animation: cssAnimation 0s ease-in 4s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+
+
+    /* white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+    animation-delay: 5s;
+    -o-animation-delay: 10s; */
+}
+
+@keyframes type {
+    from { width: 0;
+}
+    to { width: 360px; }
+}
+
+@-webkit-keyframes type {
+    from { width: 0;}
+    to { width: 360px; }
+}
+
+@keyframes typing {
+    from { width: 0%;}
+    to { width: 100% }
+}
+
+
+
+
+button{
+    margin-top: 30px;
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #014F86;
+    color: white;
+    border-radius: 3px;
+    font-weight: 100;
+}
+
+button:hover{
+    background-color: #077cd0;
+}
+
+.col-2{
+    position: relative;
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .pageimg{
+    width: 60%;
+    border-radius: 50%;
+}
+
+footer{
+
+    background-color: #012a4a;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+.footer-content{
+    display: flex;
+    /* align-items: left; */
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px;
+    padding-left: 51px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 1rem 0 3rem 0;
+    margin-right: 51px;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.socials a i{
+    font-size: 1.5rem;
+}
+
+.socials a i:hover{
+    color: #077cd0;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize ;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    /* opacity: .4; */
+    font-weight: 200;
+    color: #0362a5;
+}
+
+@media only screen and (max-width:700px){
+
+    .navbar .logo{
+        display: none;
+    }
+    
+    .navbar .webpagename{
+        margin-left: 8%;
+        font-weight: 100;
+        text-align: center;
+        text-align: justify;
+    }
+
+    .navbar{
+        height: 60px;
+    }
+
+    .row{
+        flex-direction: column-reverse;
+        margin: 1px 0;
+        
+    }
+
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .pageimg{
+        margin-top: 50px;
+        margin-left: 17%;
+        border-radius: 50%;
+    }
+
+    .col-1{
+        flex-basis: 100%;
+    }
+
+    .col-1 h1{
+        font-size: 30px;
+    }
+
+    .col-1 h4{
+        font-size: 15px;
+        margin-right: 23px;
+    }
+
+    button{
+        margin-bottom: 50px;
+    }
+
+}

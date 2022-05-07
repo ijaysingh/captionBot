@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />   
+    <link rel="stylesheet" href="../static/style.css">
+    <title>CaptionBot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../static/images/applogo.png" alt="applogo" class="logo">
+            <h2 class="webpagename">CaptionBot AI</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <h1>Hi, I am CaptionBot</h1>
+                <h4>I tell you what is there in Your Picture.</h4>
+                <button type="button" onclick="modelpage()">Get Started</button>
+            </div>
+            <div class="col-2">
+                <img src="../static/images/sitelogo.gif" alt="captionbot" class="pageimg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Code Opacity</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad quos saepe modi.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 CaptionBot. designed by <span>RSCS</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function modelpage(){
+            window.location.href="http://127.0.0.1:5000/";
+        }
+
+        function setCookie(cname,cvalue,exdays)
+        {
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname)
+        {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) 
+        {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+        }
+ 
+
+       
+        
+
+        window.onload=function(){
+           // window.speechSynthesis.speak(new SpeechSynthesisUtterance('Hello World'));
+        if(getCookie('hasPlayed') != null){
+            
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '../static/audiofile.wav');
+        audioElement.play();
+        //window.speechSynthesis.speak(new SpeechSynthesisUtterance('Hello, caption bot welcomes you'));
+
+
+        let utter = new SpeechSynthesisUtterance();
+        utter.lang = 'en-US';
+        utter.text = 'Hi, I am Caption bot';
+        utter.volume = 1;
+        utter.rate = 0.7;
+
+
+// speak
+window.speechSynthesis.speak(utter);
+
+    
+        setCookie('hasPlayed', true, NUMBER-OF-DAYS-TO-KEEP-COOKIE);
+        }
+
+        };
+    </script>
+</body>
+</html>

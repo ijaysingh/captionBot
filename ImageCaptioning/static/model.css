@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url("images/bgimg.png");  
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #014F86;
+}
+
+.webpagename{
+    color: white;
+    cursor: pointer;
+}
+
+.logo{
+    width: 100px;
+    padding-left: 6%;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.center{
+    height:100%;
+    padding: 35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.form-input{
+    /* display: flex; */
+    text-align: center; 
+    width: 480px;
+    padding:20px;
+    background:#014F86;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+                3px 3px 7px rgba(94, 104, 121, 0.377);
+    border-radius: 7px;
+}
+
+.form-input img{
+    width:100%;
+    /* display:none; */
+    margin-bottom:11px;
+}
+
+.form-input .myImage{
+    width: 100%;
+}
+
+.form-input input{
+    display:none;
+
+}
+
+.form-input label{
+    display:inline-block;
+    width: 40%;
+    height:45px;
+    /* margin: 0% 10px; */
+    line-height:50px;
+    text-align:center;
+    padding: 0px 10px;
+    color:rgb(255, 255, 255);
+    font-size:15px;
+    font-family:"Open Sans",sans-serif;
+    text-transform:Uppercase;
+    font-weight:100;
+    border-radius:7px;
+    cursor:pointer;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.form-input label:hover{
+    background: #ffffff;
+    color:#014F86
+}
+
+/* .previewImage{
+    width: 480px;
+    padding:20px;
+    background:#014F86;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+                3px 3px 7px rgba(94, 104, 121, 0.377);
+    border-radius: 7px;
+} */
+
+
+.form-input .uploadLabel {
+    margin-right: 21px;
+}
+
+.form-input .submitLabel {
+    margin-left: 21px;
+}
+
+/* .generatedCaption{
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -200px;
+}
+
+.textlogo{
+    display: inline-block;
+    width: 15%;
+
+} */
+
+.texting{
+    align-items: center;
+    padding-left: 2px;
+    margin-top: -15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.col1{
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom: 10%;
+    width: 480px;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 7px;
+    background-color: #014F86;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+                3px 3px 7px rgba(94, 104, 121, 0.377);
+}
+
+.col1 .generatedCaption{
+    font-size: 17px;
+    text-align: center;
+    font-weight: 100;
+    text-transform:capitalize;
+    margin-left: 5px;
+}
+
+.col1 .textlogo{
+    width: 10%;
+    margin-left: -5px;
+}
+
+footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+
+    background-color: #012a4a;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+.footer-content{
+    display: flex;
+    /* align-items: left; */
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px;
+    padding-left: 51px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 1rem 0 3rem 0;
+    margin-right: 51px;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.socials a i{
+    font-size: 1.5rem;
+}
+
+.socials a i:hover{
+    color: #077cd0;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize ;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    /* opacity: .4; */
+    font-weight: 200;
+    color: #0362a5;
+}

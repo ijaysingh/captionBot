@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />   
+    <link rel="stylesheet" href="../static/model.css">
+    <title>CaptionBot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../static/images/applogo.png" alt="applogo" class="logo" onclick="homepage()">
+            <h2 class="webpagename" onclick="homepage()">CaptionBot AI</h2>
+        </div>
+        <div class="center">
+            <div class="form-input">
+                <form method="POST" action="/" enctype="multipart/form-data">
+                    {% if yourResult %}    
+                    <img id="myImage" src="{{ yourResult['image'] }}"> 
+                    {% else %}
+                    <!-- <div class="preview"> -->
+                        <img class="myImage" id="myImage" src="../static/images/defaultImage.png#">
+                    <!-- </div> -->
+                    {% endif %} 
+                    
+                                     
+                    <!-- <input type="file" id="file-ip-1" accept="image/*" name="userfile" onchange="showPreview(event);"> -->
+                    <label class="uploadLabel" for="file-ip-1">Upload</label>
+                    <input type="file" id="file-ip-1" accept="image/*" name="userfile" onchange="showPreview(event)">
+                    <label class="submitLabel" for="file-ip-2">Submit</label>
+                    <input id="file-ip-2" type="submit">
+                    
+                </form>
+            </div>
+        </div>
+        <div class="texting">
+            <div class="col1">
+                <img src="../static/images/applogo.png" alt="textlogo" class="textlogo">
+                {% if yourResult %}
+                <h1 class="generatedCaption">{{ yourResult['caption'] }}</h1>
+                {% else %}
+                <h1 class="generatedCaption">Hi, Upload Your Image Please.</h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Code Opacity</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad quos saepe modi.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 codeOpacity. designed by <span>nethunt</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function change(event){
+            
+            var src = URL.createObjectURL(event.target.files[0]);
+            var image = document.getElementById("myImage");
+            image.src = src;
+            // image.style.display.none;
+            // preview.style.display = "block";
+            // if(image.src.match("../static/images/applogo.png")){
+            //     image.src = "../static/images/bgimg.png";
+            // }
+            // else{
+            //     image.src = "../static/images/applogo.png";
+            // }
+        }
+        
+
+        function showPreview(event){
+            if(event.target.files.length > 0){
+                change(event);
+                var src = URL.createObjectURL(event.target.files[0]);
+                var preview = document.getElementById("file-ip-1-preview");
+                preview.src = src;
+                preview.style.display = "block";
+                
+            }
+        }
+
+        function homepage() {
+            window.location = 'http://127.0.0.1:5500/ImageCaptioning/templates/';
+        }
+    </script>
+</body>
+</html>
