@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,8 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="../static/images/applogo.png" alt="applogo" class="logo">
-            <h2 class="webpagename">CaptionBot AI</h2>
+            <img src="../static/images/applogo.png" alt="applogo" class="logo" onclick="homepage()">
+            <h2 class="webpagename" onclick="homepage()">CaptionBot AI</h2>
         </div>
 
         <div class="row">
@@ -47,7 +48,7 @@
 
     <script>
         function modelpage(){
-            window.location.href="http://127.0.0.1:5000/";
+            window.location.href="../model";
         }
 
         function setCookie(cname,cvalue,exdays)
@@ -99,6 +100,10 @@ window.speechSynthesis.speak(utter);
         }
 
         };
+
+        function homepage() {
+            window.location = '../';
+        }
     </script>
 </body>
 </html>
