@@ -9,6 +9,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    return render_template("index.html" )
+
+@app.route('/model')
+def hellow():
     return render_template("model.html" )
 
 @app.route('/', methods=['POST'])
